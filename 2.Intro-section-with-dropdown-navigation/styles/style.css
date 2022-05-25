@@ -1,0 +1,351 @@
+/*
+=============== 
+Font family
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  /* other colors */
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-light-black: hsla(0, 0%, 13%, 0.4);
+  /* fonts */
+  --ff-primary: 'Roboto', sans-serif;
+  --transition: all 0.3s linear;
+  --radious: 0.9rem;
+  --max-width: 1170px;
+  --bs-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --bs-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-grey-10);
+  color: var(--clr-light-black);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+/* bigger screen */
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+button {
+  text-transform: capitalize;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--clr-black);
+  border: 2px solid transparent;
+  border-radius: var(--radious);
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-white);
+}
+.btn:hover {
+  background: transparent;
+  border: 2px solid var(--clr-black);
+  color: var(--clr-black);
+}
+/*
+=============== 
+NAVBAR
+===============
+*/
+.nav-links,
+.nav-btn {
+  display: none;
+}
+.nav {
+  height: 5rem;
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+}
+.nav-center {
+  width: 95vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-btn,
+.close-btn {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+/* change color of SVG */
+.icon {
+  filter: invert(23%) sepia(30%) saturate(37%);
+}
+@media screen and (min-width: 992px) {
+  .menu-btn {
+    display: none;
+  }
+  .nav-btn {
+    display: block;
+    background: transparent;
+    color: var(--clr-light-black);
+  }
+  .nav-btn:hover {
+    border-color: var(--clr-light-black);
+    color: var(--clr-light-black);
+  }
+  .nav-links {
+    margin-left: 5rem;
+    display: flex;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    justify-self: start;
+  }
+  .nav-links a {
+    display: flex;
+    align-items: center;
+  }
+  .nav-links a img {
+    margin-left: 3px;
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .nav-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+  }
+}
+
+/*
+=============== 
+SIDEBAR
+===============
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 100vh;
+  background: var(--clr-white);
+  z-index: 4;
+  transition: var(--transition);
+  transform: translateX(100%);
+}
+.show-sidebar {
+  transform: translateX(0);
+}
+.close-btn {
+  margin-top: 1rem;
+  position: relative;
+  top: 0;
+  left: 85%;
+}
+.sidebar-links {
+  position: relative;
+  margin-left: 2rem;
+}
+.sidebar-links li {
+  margin-top: 1rem;
+}
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+}
+.sidebar-links a img {
+  margin-left: 3px;
+}
+.sub-links {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: var(--clr-white);
+  width: 100%;
+  z-index: 1;
+  border-radius: 0.4rem;
+  box-shadow: var(--bs-light);
+}
+.link-icon {
+  filter: invert(0%) sepia(0%) saturate(13%) opacity(70%);
+}
+/* show sub-menu */
+.show {
+  display: block;
+}
+.sidebar-buttons {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.sidebar-btn {
+  margin-top: 2px;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  color: var(--clr-light-black);
+  transition: var(--transition);
+}
+.sidebar-btn:hover {
+  padding: 0.5rem;
+  background: transparent;
+  color: var(--clr-light-black);
+  border-color: var(--clr-light-black);
+}
+
+/*
+=============== 
+HERO
+===============
+*/
+.hero-center {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+}
+.section-center {
+  width: 95vw;
+  margin: 1rem auto;
+  max-width: var(--max-width);
+  text-align: center;
+}
+.hero-img-desk {
+  display: none;
+}
+.hero-mob-photo {
+  width: 100%;
+}
+.hero-info h1 {
+  margin-top: 2rem;
+  color: var(--clr-black);
+}
+.hero-info h4 {
+  width: 20rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.hero-btn {
+  margin: 2rem 0;
+}
+.brands img {
+  margin: 0 1rem;
+}
+@media screen and (min-width: 992px) {
+  .hero-img-mob {
+    display: none;
+  }
+  .hero-img-desk {
+    display: block;
+  }
+  .hero-desk-photo {
+    width: 70%;
+  }
+  .section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+  .hero-info {
+    position: relative;
+    text-align: left;
+  }
+  .hero-info h1 {
+    display: grid;
+    margin-bottom: 3rem;
+  }
+  .hero-info h4 {
+    margin: 0 0;
+    width: 24rem;
+    line-height: 1.5;
+  }
+  .brands {
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+  }
+}

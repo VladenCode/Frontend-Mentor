@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- JS scripts -->
+    <script src="./scripts/app.js" defer></script>
+    <!-- Flavicon -->
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+    <title>Snap-Remot work</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-center">
+        <!-- logo and togle button -->
+        <div class="nav-header">
+          <img src="./images/logo.svg" alt="nav logo" class="nav-logo" />
+          <button type="button" class="menu-btn" id="nav-btn">
+            <img src="./images/icon-menu.svg" alt="menu toggle" class="icon" />
+          </button>
+        </div>
+        <!-- nav links -->
+        <ul class="nav-links">
+          <li>
+            <a href="#"
+              >features
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="features"
+                class="link-icon"
+            /></a>
+            <!-- sub-navigation links -->
+            <ul class="sub-links">
+              <li>
+                <a href="#"
+                  ><img src="./images/icon-todo.svg" alt="todo icon" /> todo
+                  list</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon-calendar.svg" alt="calendar icon" />
+                  calendar</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon-reminders.svg" alt="calendar icon" />
+                  reminders</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/icon-planning.svg" alt="planing icon" />
+                  planning</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              >company
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt="company"
+                class="link-icon"
+            /></a>
+            <!-- sub-navigation links -->
+            <ul class="sub-links">
+              <li>
+                <a href="#">history</a>
+              </li>
+              <li>
+                <a href="#">our team</a>
+              </li>
+              <li>
+                <a href="#">blog</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">careers</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
+        </ul>
+        <!-- nav buttons -->
+        <div class="nav-buttons">
+          <button type="button" class="btn nav-btn">login</button>
+          <button type="button" class="btn nav-btn">register</button>
+        </div>
+      </div>
+    </nav>
+    <!-- SIDEBAR (smaller screen) -->
+    <aside class="sidebar" id="sidebar">
+      <button type="button" class="close-btn">
+        <img
+          src="./images/icon-close-menu.svg"
+          alt="close-btn"
+          class="icon"
+          id="close-btn"
+        />
+      </button>
+      <!-- sidebar links -->
+      <ul class="sidebar-links">
+        <li>
+          <a href="#" onclick="myFunction()"
+            >features
+            <img
+              src="./images/icon-arrow-down.svg"
+              alt="features"
+              class="link-icon"
+              id="sub-menu"
+          /></a>
+          <!-- sub-sidebar links -->
+          <div class="sub-links">
+            <a href="#"
+              ><img src="./images/icon-todo.svg" alt="todo icon" /> todo list</a
+            >
+            <a href="#"
+              ><img src="./images/icon-calendar.svg" alt="calendar icon" />
+              calendar</a
+            >
+            <a href="#"
+              ><img src="./images/icon-reminders.svg" alt="calendar icon" />
+              reminders</a
+            >
+            <a href="#"
+              ><img src="./images/icon-planning.svg" alt="planing icon" />
+              planning</a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            >company
+            <img
+              src="./images/icon-arrow-down.svg"
+              alt="company"
+              class="link-icon"
+              id="sub-menu"
+          /></a>
+          <!-- sub-sidebar links -->
+          <div class="sub-links">
+            <a href="#">history</a>
+            <a href="#">our team</a>
+            <a href="#">blog</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">careers</a>
+        </li>
+        <li>
+          <a href="#">about</a>
+        </li>
+      </ul>
+      <!-- sidebar buttons -->
+      <div class="sidebar-buttons">
+        <button type="button" class="btn sidebar-btn">login</button>
+        <button type="button" class="btn sidebar-btn">register</button>
+      </div>
+    </aside>
+
+    <!-- HEADER -->
+    <head class="hero">
+      <div class="section-center hero-center">
+        <!-- mobile img -->
+        <article class="hero-img-mob">
+          <img
+            src="./images/image-hero-mobile.png"
+            alt="hero image"
+            class="hero-mob-photo"
+          />
+        </article>
+        <article class="hero-info">
+          <h1>Make <span>remote work</span></h1>
+          <h4>
+            Get your team in sync, no mater your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </h4>
+          <!-- button -->
+          <button type="button" class="hero-btn btn">learn more</button>
+          <!-- brands -->
+          <div class="brands">
+            <img src="./images/client-databiz.svg" alt="client-databiz" />
+            <img src="./images/client-audiophile.svg" alt="client-audiophile" />
+            <img src="./images/client-meet.svg" alt="client-meet" />
+            <img src="./images/client-maker.svg" alt="client-maker" />
+          </div>
+        </article>
+        <!-- desktop img -->
+        <article class="hero-img-desk">
+          <img
+            src="./images/image-hero-desktop.png"
+            alt="hero image"
+            class="hero-desk-photo"
+          />
+        </article>
+      </div>
+    </head>
+  </body>
+</html>
