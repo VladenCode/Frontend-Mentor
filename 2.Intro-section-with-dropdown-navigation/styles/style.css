@@ -340,6 +340,7 @@ HERO
   }
   .hero-info h1 {
     display: grid;
+    font-size: 4rem;
     margin-bottom: 3rem;
   }
   .hero-info h4 {
@@ -347,9 +348,14 @@ HERO
     width: 24rem;
     line-height: 1.5;
   }
+  .hero-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
   .brands {
-    cursor: pointer;
-    position: relative;
-    bottom: 0;
+    margin-top: 3rem;
+  }
+  .brands img {
+    width: auto;
   }
 }
