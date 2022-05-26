@@ -1,6 +1,4 @@
-// Sidebar toggle
-
-const navBtn = document.querySelector('#nav-btn');
+const navBtn = document.querySelector('#menu-btn');
 const closeBtn = document.querySelector('#close-btn');
 const sidebar = document.querySelector('#sidebar');
 

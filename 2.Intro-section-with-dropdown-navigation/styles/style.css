@@ -179,7 +179,6 @@ NAVBAR
   .nav-links {
     margin-left: 5rem;
     display: flex;
-    grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     column-gap: 2rem;
     justify-self: start;
