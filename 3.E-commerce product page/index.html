@@ -50,7 +50,11 @@
             </li>
           </ul>
           <div class="profile-container">
-            <img src="./assets/images/icon-cart.svg" alt="cart icon" />
+            <img
+              src="./assets/images/icon-cart.svg"
+              alt="cart icon"
+              class="cart-icon"
+            />
             <img
               src="./assets/images/image-avatar.png"
               alt="image-avatar"
@@ -89,38 +93,44 @@
     <header class="hero">
       <div class="section-center">
         <!-- main-product -->
-        <article class="product-img-container">
-          <img
-            src="./assets/images/image-product-1.jpg"
-            alt="shoes"
-            class="main-img"
-          />
-          <div class="arrow left">
-            <img src="./assets/images/icon-previous.svg" alt="icon-previous" />
-          </div>
-          <div class="arrow right">
-            <img src="./assets/images/icon-next.svg" alt="icon-previous" />
-          </div>
-        </article>
-        <!-- thumbnail-img-products -->
-        <article class="thumbnail-photos">
-          <img
-            src="./assets/images/image-product-1-thumbnail.jpg"
-            alt="sneaker photo"
-          />
-          <img
-            src="./assets/images/image-product-2-thumbnail.jpg"
-            alt="sneaker photo"
-          />
-          <img
-            src="./assets/images/image-product-3-thumbnail.jpg"
-            alt="sneaker photo"
-          />
-          <img
-            src="./assets/images/image-product-4-thumbnail.jpg"
-            alt="sneaker photo"
-          />
-        </article>
+        <div class="gallery">
+          <article class="product-img-container">
+            <img
+              src="./assets/images/image-product-1.jpg"
+              alt="shoes"
+              class="main-img"
+            />
+            <div class="arrow left">
+              <img
+                src="./assets/images/icon-previous.svg"
+                alt="icon-previous"
+              />
+            </div>
+            <div class="arrow right">
+              <img src="./assets/images/icon-next.svg" alt="icon-previous" />
+            </div>
+          </article>
+          <!-- thumbnail-img-products -->
+          <article class="thumbnail-photos">
+            <img
+              src="./assets/images/image-product-1-thumbnail.jpg"
+              alt="sneaker photo"
+              class="thumbnail-selected"
+            />
+            <img
+              src="./assets/images/image-product-2-thumbnail.jpg"
+              alt="sneaker photo"
+            />
+            <img
+              src="./assets/images/image-product-3-thumbnail.jpg"
+              alt="sneaker photo"
+            />
+            <img
+              src="./assets/images/image-product-4-thumbnail.jpg"
+              alt="sneaker photo"
+            />
+          </article>
+        </div>
         <div class="content">
           <article class="hero-info">
             <span>sneaker company</span>
