@@ -16,6 +16,7 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile](./screenshot.jpg)
+img[alt=screenshot] { width: 200px; }
 ![Desktop](./screenshot1.jpg)
 
 ## My process
