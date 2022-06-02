@@ -69,6 +69,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - grid auto rows property to set defauly row dimensions (max-content - depends on the largesd element)
 - flex-flow: column nowrap; property 
 - flex: 1 0 auto;
+- activity_bg > img new whay targeting child elemnt in parent CSS
 
 
 
