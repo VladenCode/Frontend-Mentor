@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 <p align="center">
-<img src="https://github.com/VladenCode/Frontend-Mentor/blob/main/4.Time-tracker/screenshot.jpg" width="400" height="200" />
+<img src="https://github.com/VladenCode/Frontend-Mentor/blob/main/4.Time-tracker/screenshot.jpg" width="400" height="300" />
 </p>
 
 ## My process
