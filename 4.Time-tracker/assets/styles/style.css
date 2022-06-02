@@ -1,0 +1,359 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+==============
+Global Variables
+==============
+*/
+:root {
+  /* Primary */
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-work-red: hsl(15, 100%, 70%);
+  --clr-play-blue: hsl(195, 74%, 62%);
+  --clr-study-red: hsl(348, 100%, 68%);
+  --clr-exercise-green: hsl(145, 58%, 55%);
+  --clr-social-violet: hsl(264, 64%, 52%);
+  --clr-self-care-orange: hsl(43, 84%, 65%);
+  --clr-hover-blue: hsl(236, 41%, 34%);
+  /* Secondary */
+  --clr-very-dark-blue: #0f1424;
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* Other variables */
+  --transition: all 0.3s linear;
+  --border-radius: 0.75rem;
+  --max-width-mob: 375px;
+  --max-width-desk: 1440px;
+  --ff-primary: 'Rubik', sans-serif;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--clr-very-dark-blue);
+  display: grid;
+  place-items: center;
+  padding: 8.1rem 2.4rem;
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--clr-desaturated-blue);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+  color: var(--clr-white);
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 112.5%;
+  } /*18px*/
+}
+/* 
+==============
+Activity-tracker 
+==============
+*/
+.activity-tracker {
+  width: 100%;
+  height: auto;
+  display: grid;
+  /* rows created by brwosers not us. Each row as much height as requires  */
+  grid-auto-rows: max-content;
+  /* single colum layout */
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2.4rem;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    /* use to even up the space in VH for the rows */
+    grid-template-rows: 1fr 1fr;
+    min-height: 51.8rem;
+    gap: 3rem;
+  }
+}
+/* desktop */
+@media screen and (min-width: 992px) {
+  .activity-tracker {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+}
+/* 
+==============
+Profile
+==============
+*/
+.activity-tracker__menu {
+  background: var(--clr-dark-blue);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 100%;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker__menu {
+    /* how height using grid lines */
+    grid-row: 1/3;
+    display: flex;
+    /* shorthand for -> flex-flow: flex-direction flex-wrap; */
+    flex-flow: column nowrap;
+  }
+}
+.activity-tracker_owner {
+  width: 100%;
+  padding: 3.1rem 2.9rem;
+  /* so that itt will wrap picture and name part */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--clr-social-violet);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker_owner {
+    padding: 3.4rem 2.9rem 8rem 2.9rem;
+    flex-flow: column nowrap;
+    align-items: start;
+    gap: 4.3rem;
+    /* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
+    flex: 1 0 auto;
+  }
+}
+.activity-tracker_owner img {
+  width: 6.4rem;
+  border: 0.3rem solid var(--clr-white);
+  border-radius: 50%;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker_owner img {
+    width: 7.8rem;
+  }
+}
+.activity-tracker_owner-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker_owner-container {
+    gap: 0.3rem;
+    max-width: 60%;
+  }
+}
+.activity-tracker_owner-for {
+  color: var(--clr-pale-blue);
+}
+.activity-tracker__owner-name {
+  text-transform: capitalize;
+  color: var(--clr-white);
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker_owner-name {
+    line-height: 4rem;
+  }
+}
+.activity-tracker__options {
+  padding: 2.4rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker__options {
+    /* in tablet mode be in column */
+    flex-flow: column nowrap;
+    gap: 2.1rem;
+    padding: 2.6rem 3.2rem 3.2rem;
+  }
+}
+.activity-tracker__option {
+  /* so buttons dont spand all the way in row. Length depends on written content */
+  width: max-content;
+  background: transparent;
+  border: transparent;
+  font-size: large;
+  color: var(--clr-desaturated-blue);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.activity-tracker__option:hover {
+  color: var(--clr-white);
+}
+/* 
+==============
+Activities
+==============
+*/
+.activity-tracker_activity {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3.8rem 1fr;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity-tracker_activity {
+    grid-template-rows: 4.5rem 1fr;
+  }
+}
+.activity-tracker_activity:is(.work) {
+  background: var(--clr-work-red);
+}
+.activity-tracker_activity:is(.play) {
+  background: var(--clr-play-blue);
+}
+.activity-tracker_activity:is(.study) {
+  background: var(--clr-study-red);
+}
+.activity-tracker_activity:is(.exercise) {
+  background: var(--clr-exercise-green);
+}
+.activity-tracker_activity:is(.social) {
+  background: var(--clr-social-violet);
+}
+.activity-tracker_activity:is(.self-care) {
+  background: var(--clr-self-care-orange);
+}
+.activity_bg {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  /* place img to the right */
+  display: grid;
+  place-items: start end;
+}
+/* new way of targeting element using '>' */
+.activity_bg > img {
+  /* moving img out of parent element a bit */
+  transform: translate(-2rem, -1rem);
+  position: relative;
+  z-index: 1;
+}
+.activity_info {
+  position: relative;
+  z-index: 5;
+  /* need to look into this... */
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background: var(--clr-dark-blue);
+  transition: var(--transition);
+  height: 100%;
+  padding: 2.8rem 2.4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.activity-tracker_activity:hover > .activity_info {
+  background: var(--clr-hover-blue);
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity_info {
+    gap: 2.4rem;
+    padding: 2.9rem 3rem 3.2rem;
+  }
+}
+.activity_header,
+.activity_timeframes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  /* after wraping need the gap */
+  gap: 1rem;
+}
+/* tablet */
+@media screen and (min-width: 500px) {
+  .activity_timeframes {
+    flex-flow: column nowrap;
+    align-items: start;
+    gap: 0.8rem;
+  }
+}
+
+.activity_header h4 {
+  text-transform: capitalize;
+  font-weight: 400;
+  color: var(--clr-white);
+}
+.activity_option {
+  background: transparent;
+  border: transparent;
+}
+.activity_option img {
+  width: 2rem;
+}
+/* 
+If you giv the img in svg path in HTML you ca use this to color svg icon:
+
+.activity_option img:hover > svg path{
+    fill:white; 
+} 
+*/
+.activity_timeframes h2 {
+  color: var(--clr-white);
+}

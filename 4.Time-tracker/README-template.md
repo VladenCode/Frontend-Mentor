@@ -62,7 +62,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- proper nameing scheem
+- proper HTML structure
+- when to use button element
+- change font siye for bigger scrren with  media query using on the hole Html page and %
+- grid auto rows property to set defauly row dimensions (max-content - depends on the largesd element)
+- flex-flow: column nowrap; property 
+- flex: 1 0 auto;
+
+
 
 To see how you can add code snippets, see below:
 

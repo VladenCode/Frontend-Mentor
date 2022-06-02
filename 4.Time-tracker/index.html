@@ -5,8 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Flavicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- Font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="activity-tracker">
+      <article class="activity-tracker__menu">
+        <!-- Profile part -->
+        <div class="activity-tracker_owner">
+          <img
+            src="./assets/images/image-jeremy.png"
+            alt="profile image"
+          />
+          <div class="activity-tracker__owner-container">
+            <small class="activity-tracker__owner-for">Report for</small>
+            <h2 class="activity-tracker__owner-name">jeremy robson</h2>
+          </div>
+        </div>
+        <!-- Options part -->
+        <div class="activity-tracker__options">
+        <button class="activity-tracker__option" data-option="daily">
+          Daily
+        </button>
+        <button class="activity-tracker__option" data-option="weekly">
+          Weekly
+        </button>
+        <button class="activity-tracker__option" data-option="monthly">
+          Monthly
+        </button>
+      </div>
+        </article>
+        <!-- Activites-work -->
+        <article class="activity-tracker_activity work">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-work.svg" alt="work suitcase" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>work</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>32hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 36hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Activites-play -->
+        <article class="activity-tracker_activity play">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-play.svg" alt="joystick" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>play</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>10hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 8hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Activites-study -->
+        <article class="activity-tracker_activity study">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-study.svg" alt="book" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>study</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>4hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 7hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Activites-exercise -->
+        <article class="activity-tracker_activity exercise">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-exercise.svg" alt="running man" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>exercise</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>4hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 5hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Activites-social -->
+        <article class="activity-tracker_activity social">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-social.svg" alt="work suitcase" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>social</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>5hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 10hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Activites-self care -->
+        <article class="activity-tracker_activity self-care">
+          <div class="activity_bg">
+            <img src="./assets/images/icon-self-care.svg" alt="work suitcase" />
+          </div>
+          <div class="activity_info">
+            <header class="activity_header">
+              <h4>self care</h4>
+              <button class="activity_option">
+                <img src="./assets/images/icon-ellipsis.svg" alt="ecllipsis" />
+              </button>
+            </header>
+            <div class="activity_timeframes">
+              <h2>2hrs</h2>
+              <div class="activity_previous-timeframe">
+                <h5>last week - 2hrs</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+      </article>
+    </main>
+  </body>
 </html>
