@@ -29,8 +29,9 @@ Users should be able to:
 - Switch between viewing Daily, Weekly, and Monthly stats
 
 ### Screenshot
-
-![desktop view](./screenshot.jpg)
+<p align="center">
+<img src="https://github.com/VladenCode/Frontend-Mentor/blob/main/4.Time-tracker/screenshot.jpg" width="400" height="250" />
+</p>
 
 ## My process
 
