@@ -1,0 +1,176 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+==============
+Global Variables
+==============
+*/
+:root {
+  /* Colors */
+  /* Primary */
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-very-dark-cyan: hsl(158, 59%, 17%);
+  --clr-cream: hsl(30, 38%, 92%);
+  /* Secundary */
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* Other variables */
+  --transition: all 0.3s linear;
+  --border-radious: 0.75rem;
+  --max-width-mob: 375px;
+  --max-width-desk: 1440px;
+  --bs-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --ff-primary: 'Monseratt', sans-serif;
+  --ff-secondary: 'Fraunces', sans-serif;
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  /* min-height: 100vh; - because 'vh' are not properly supported on mobile, sooo next solution is bettter(the evaulated height is going to be in 'px')*/
+  min-height: calc(100vh - 0.1px);
+  background: var(--clr-cream);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem;
+}
+
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1,
+.price {
+  font-family: var(--ff-secondary);
+  color: var(--clr-very-dark-blue);
+  text-transform: capitalize;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.price {
+  color: var(--clr-dark-cyan);
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500%;
+  color: var(--clr-dark-grayish-blue);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+picture img {
+  height: 100%;
+}
+
+button,
+li {
+  font-family: inherit;
+}
+
+.main-section_product-card h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.main-section_product-card p {
+  margin-bottom: 1rem;
+}
+
+.main-section_product-card ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-section_product-card ul li:nth-child(2) {
+  text-decoration: line-through;
+  color: var(--clr-dark-grayish-blue);
+}
+
+.main-section_product-card article:first-child img {
+  border-radius: var(--border-radious) var(--border-radious) 0 0;
+}
+
+.main-section_product-card article:last-child {
+  background: var(--clr-white);
+  padding: 1.5rem;
+  border-radius: 0 0 var(--border-radious) var(--border-radious);
+  margin-top: -1rem;
+}
+
+.main-section_product-card {
+  max-width: 600px;
+}
+
+.main-section_product-card .btn {
+  background: var(--clr-dark-cyan);
+  color: var(--clr-white);
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--border-radious);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section_product-card .btn img {
+  margin-right: 0.5rem;
+}
+.main-section_product-card .btn:hover {
+  transition: var(--transition);
+  background-color: var(--clr-very-dark-cyan);
+}
+
+@media screen and (min-width: 640px) {
+  .main-section_product-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-section_product-card article:first-child img {
+    border-radius: var(--border-radious) 0 0 var(--border-radious);
+  }
+
+  .main-section_product-card article:last-child {
+    border-radius: 0 var(--border-radious) var(--border-radious) 0;
+    margin-top: 0;
+  }
+}
+/* 
+==============
+Product-Preview-Card
+==============
+*/
